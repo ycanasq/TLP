@@ -5,7 +5,7 @@
 # Autor: Yuricik Cañas
 # Fecha E1: 05/09/2025 
 # Descripción: Archivo de configuración del juego Snake Clásico en formato .brik
-
+# 
 # ==================================
 # NOTAS SEMÁNTICAS
 # ==================================
@@ -124,4 +124,5 @@ mensajes = {
     "inicio": "¡Bienvenido al Snake Clásico! Usa WASD para moverte.",
     "game_over": "¡Fin del juego! Presiona 'r' para reiniciar.",
     "pausa": "Juego en pausa. Presiona 'p' para continuar."
+
 }
