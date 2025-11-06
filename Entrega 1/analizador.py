@@ -1,10 +1,3 @@
-# analizador.py
-# -*- coding: utf-8 -*-
-"""
-Analizador para archivos .brik (tetris.brik / snake.brik)
-Versión sin uso de sys.argv
-"""
-
 import re
 import json
 import os
