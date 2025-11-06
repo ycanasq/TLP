@@ -139,8 +139,6 @@ class Parser:
                 item = self.parse_block()
             else:
                 item = self.parse_value()
-
-            item = self.parse_value()
             
             items.append(item)
 
