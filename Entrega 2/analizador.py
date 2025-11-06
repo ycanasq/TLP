@@ -132,8 +132,16 @@ class Parser:
             if peek[0] == 'OPERATOR' and peek[1] == ']':
                 self.get_token()
                 break
+            
+            if peek[0] == 'OPERADOR' and peek[1] == '[':
+                item = self.parse_list()
+            elif peek[0] == 'OPERADOR' and peek[1] == '{':
+                item = self.parse_block()
+            else:
+                item = self.parse_value()
 
             item = self.parse_value()
+            
             items.append(item)
 
             peek2 = self.peek_token()
