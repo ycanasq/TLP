@@ -1,0 +1,570 @@
+{
+    "nombre_juego": "Tetris Clasico",
+    "version": "1.0",
+    "tablero": {
+        "ancho": 10,
+        "alto": 20
+    },
+    "velocidad_inicial": 1.0,
+    "piezas": {
+        "I": {
+            "color": "cyan",
+            "rotaciones": [
+                [
+                    [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                ],
+                "Rotación",
+                0,
+                [
+                    [
+                        0,
+                        0,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        1,
+                        0
+                    ]
+                ],
+                "Rotación",
+                90,
+                [
+                    [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                ],
+                "Rotación",
+                180,
+                [
+                    [
+                        0,
+                        1,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        0,
+                        0
+                    ]
+                ],
+                "Rotación",
+                270
+            ]
+        },
+        "O": {
+            "color": "yellow",
+            "rotaciones": [
+                [
+                    [
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        1
+                    ]
+                ],
+                "Siempre",
+                "es",
+                "igual"
+            ]
+        },
+        "T": {
+            "color": "purple",
+            "rotaciones": [
+                [
+                    [
+                        1,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0
+                    ]
+                ],
+                0,
+                [
+                    [
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        1
+                    ]
+                ],
+                90,
+                [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        1
+                    ]
+                ],
+                180,
+                [
+                    [
+                        1,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        0
+                    ],
+                    [
+                        1,
+                        0,
+                        0
+                    ]
+                ],
+                270
+            ]
+        },
+        "L": {
+            "color": "orange",
+            "rotaciones": [
+                [
+                    [
+                        1,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        0
+                    ]
+                ],
+                0,
+                [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        0,
+                        0
+                    ]
+                ],
+                90,
+                [
+                    [
+                        0,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        1
+                    ]
+                ],
+                180,
+                [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        1,
+                        1,
+                        1
+                    ]
+                ],
+                270
+            ]
+        },
+        "J": {
+            "color": "blue",
+            "rotaciones": [
+                [
+                    [
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        1,
+                        1
+                    ]
+                ],
+                0,
+                [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        1
+                    ]
+                ],
+                90,
+                [
+                    [
+                        1,
+                        1,
+                        0
+                    ],
+                    [
+                        1,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        0,
+                        0
+                    ]
+                ],
+                180,
+                [
+                    [
+                        1,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        0
+                    ]
+                ],
+                270
+            ]
+        },
+        "S": {
+            "color": "green",
+            "rotaciones": [
+                [
+                    [
+                        0,
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0
+                    ]
+                ],
+                0,
+                [
+                    [
+                        0,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        1
+                    ]
+                ],
+                90,
+                [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        1,
+                        0
+                    ]
+                ],
+                180,
+                [
+                    [
+                        1,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        0
+                    ]
+                ],
+                270
+            ]
+        },
+        "Z": {
+            "color": "red",
+            "rotaciones": [
+                [
+                    [
+                        1,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        0,
+                        0
+                    ]
+                ],
+                0,
+                [
+                    [
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        1,
+                        1
+                    ],
+                    [
+                        0,
+                        1,
+                        0
+                    ]
+                ],
+                90,
+                [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        1,
+                        1
+                    ]
+                ],
+                180,
+                [
+                    [
+                        0,
+                        1,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        0
+                    ],
+                    [
+                        1,
+                        0,
+                        0
+                    ]
+                ],
+                270
+            ]
+        }
+    },
+    "regla_figura_baja": {
+        "condicion": "pieza_toca_otra_pieza o pieza_toca_fondo",
+        "accion": "pieza_baja o pieza_se_detiene"
+    },
+    "regla_linea_completa": {
+        "evento": "linea_completada",
+        "accion_1": "eliminar_fila",
+        "accion_2": "bajan_piezas_superiores",
+        "accion_3": "agregar_filas_vacias",
+        "puntos_por_linea_despejada": 100
+    },
+    "regla_aparicion_aleatoria": {
+        "aparicion_aleatoria": "si"
+    },
+    "regla_fin_juego": {
+        "condicion": "pieza_alcanza_tope",
+        "accion": "terminar_partida"
+    },
+    "regla_acelerar_caida": {
+        "condicion": "tecla_presionada",
+        "multiplicar_velocidad": 1.2
+    },
+    "regla_rotar_pieza": {
+        "condicion": "tecla_presionada",
+        "accion": "rotar_pieza_90"
+    },
+    "controles": {
+        "mover_izquierda": "a",
+        "mover_derecha": "d",
+        "acelerar_abajo": "s",
+        "rotar": "w",
+        "pausar": "p",
+        "reiniciar": "r"
+    },
+    "mensajes": {
+        "inicio": "¡Bienvenido al Snake Clásico! Usa WASD para moverte.",
+        "game_over": "¡Fin del juego! Presiona 'r' para reiniciar.",
+        "pausa": "Juego en pausa. Presiona 'p' para continuar."
+    }
+}
