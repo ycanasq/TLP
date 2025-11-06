@@ -156,7 +156,7 @@ class Juego:
                 elif celda == 2: 
                     linea += "[]"  # Bloque móvil/Serpiente cuerpo
                 elif celda == 3: 
-                    linea += "(@o)"  # Cabeza serpiente
+                    linea += "()"  # Cabeza serpiente
                 elif celda == 4: 
                     linea += "**"  # Comida
             linea += "|"
