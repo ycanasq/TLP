@@ -163,7 +163,7 @@ controles = {
 # MENSAJES
 # ==================================
 mensajes = {
-    "inicio": "¡Bienvenido al Snake Clásico! Usa WASD para moverte.",
+    "inicio": "¡Bienvenido al Tetris Clásico! Usa WASD para moverte.",
     "game_over": "¡Fin del juego! Presiona 'r' para reiniciar.",
     "pausa": "Juego en pausa. Presiona 'p' para continuar."
 }
