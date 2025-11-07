@@ -1,17 +1,16 @@
-### TLP - 2025
+#### TLP - 2025
 Este repositorio recopila las entregas del proyecto práctico del curso Teoría de Lenguajes de Programación (TLP).
 
-# Intérprete y motor de ejecución para juegos definidos en lenguaje BRIK
+## Intérprete y motor de ejecución para juegos definidos en lenguaje BRIK
 
 Desarrollo de un analizador léxico, sintáctico y un intérprete en Python capaces de ejecutar dos juegos clásicos: Snake y Tetris, definidos a través de un lenguaje propio (.brik) y su árbol sintáctico (.ast). El proyecto demuestra la aplicación de conceptos de compiladores, estructuras de datos y procesamiento de archivos JSON en un entorno lúdico interactivo.
 
-## Getting Started
 
-### Dependencies
+#### Dependencias
 
 * python
 
-### Installing
+#### Instalación
 
 Asegúrate de tener todos los siguientes archivos en la misma carpeta:
 runtime.py
@@ -19,7 +18,7 @@ analizador.py
 snake.brik
 tetris.brik
 
-### Executing program
+#### Execución del programa
 
 1. Generar el árbol sintáctico (.ast)
 Ejecuta el analizador:
@@ -40,11 +39,11 @@ Usa el archivo .ast generado para correr el juego:
 python runtime.py arbol_tetris.ast
 ```
 
-## Authors
+#### Autor
 
 Yuricik Cañas Quintero
 
-## Version History
+#### Historial de versiones
 
 * Entrega2
     * Correcciones en el analizador y tetris.brik
@@ -52,6 +51,6 @@ Yuricik Cañas Quintero
 * Entrega1
     * Entraga inicial: analizador.py, snake.brik, tetris.brik
 
-## License
+#### Licencia
 
 Este proyecto practico se elaboro para el curso de Teoria de Lenguaje de programación
