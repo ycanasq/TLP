@@ -1,4 +1,4 @@
-# TLP - 2025
+### TLP - 2025
 Este repositorio recopila las entregas del proyecto práctico del curso Teoría de Lenguajes de Programación (TLP).
 
 # Intérprete y motor de ejecución para juegos definidos en lenguaje BRIK
