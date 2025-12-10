@@ -1,46 +1,49 @@
-@echo off
-REM --- Script para compilar y ejecutar juegos de BrickScript ---
+﻿@echo off
+REM --- Script para analizar y ejecutar juegos BrickScript ---
 
-REM Limpia la pantalla para una ejecucion limpia
+REM Limpia la pantalla
 cls
 
-REM Verifica si se proporciono un nombre de juego. Si no, muestra como usarlo.
+REM Verifica si se proporciono un nombre de juego
 if "%1"=="" (
     echo.
-    echo  Uso: jugar [nombre_del_juego]
-    echo  Ejemplo: jugar snake
-    echo  Ejemplo: jugar tetris
+    echo Uso: jugar [nombre_del_juego]
+    echo Ejemplo: jugar snake
+    echo Ejemplo: jugar tetris
     echo.
     goto :eof
 )
 
-REM --- FASE 1: COMPILACION ---
-echo Compilando el juego: %1...
+set JUEGO=%1
+set BRIK=%JUEGO%.brik
+set AST=arbol_%JUEGO%.ast
+
+echo.
+echo Analizando el juego: %JUEGO%...
 echo ----------------------------------
 
-REM Ejecuta el compilador de Python.
-C:\Python27\python.exe .\compiler.py .\games\%1.brick
+REM --- FASE 1: ANALIZAR EL BRICK ---
+REM Redirige el nombre del archivo al analizador para evitar input manual
+echo %BRIK% | C:\Python27\python.exe .\analizador.py .\games\%1.brik
 
-REM Verifica si el comando anterior (la compilacion) fallo.
-REM sys.exit(1) en Python establece el 'errorlevel' a 1.
-if errorlevel 1 (
+REM Verifica si la compilación del AST fallo
+if not exist %AST% (
     echo.
-    echo !!! Ocurrio un error durante la compilacion. !!!
+    echo !!! Error: No se genero el archivo AST !!!
     echo Revisa los mensajes de error de arriba.
     pause
     goto :eof
 )
 
 echo.
-echo Compilacion exitosa. Iniciando el juego...
+echo Analisis exitoso. Iniciando el juego...
 echo ----------------------------------
 pause
 
 REM --- FASE 2: EJECUCION ---
-REM Ejecuta el motor del juego con el archivo .json resultante.
-C:\Python27\python.exe .\runtime.py .\games\%1.json
+REM Ejecuta el motor del juego con el archivo .ast resultante
+C:\Python27\python.exe .\runtime.py .\games\%1.ast
 
-REM Fin del script.
 echo.
 echo Juego terminado. Presiona cualquier tecla para cerrar esta ventana.
 pause
