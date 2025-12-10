@@ -1,0 +1,127 @@
+# ==================================
+# METADATOS DEL ARCHIVO
+# ==================================
+# Archivo: snake.brik
+# Autor: Yuricik Cañas
+# Fecha E1: 05/09/2025 
+# Descripción: Archivo de configuración del juego Snake Clásico en formato .brik
+
+# ==================================
+# NOTAS SEMÁNTICAS
+# ==================================
+# - La serpiente se mueve automáticamente y crece al comer comida.
+# - El juego termina si la serpiente choca con una pared o consigo misma.
+# - El puntaje aumenta con cada comida y la velocidad sube cada 50 puntos.
+
+# ==================================
+# PARAMETROS DEL JUEGO
+# ==================================
+nombre_juego = "Snake Clasico"
+version = "1.0"
+
+# Dimensiones del tablero (en celdas)
+tablero = {
+    "ancho": 17,
+    "alto": 17
+}
+
+# Velocidad inicial de la serpiente (en celdas por segundo)
+velocidad_inicial = 3.0
+
+# Longitud inicial de la serpiente
+longitud_inicial = 3
+
+# ==================================
+# DEFINICIÓN DE LOS ELEMENTOS
+# ==================================
+
+# La serpiente está compuesta por segmentos que se mueven en cadena.
+# Cada segmento hereda la posición del anterior.
+
+serpiente = {
+    "color": "green",
+    "cabeza_color": "darkgreen",
+    "forma": "cuadrado",
+    "longitud_inicial": longitud_inicial
+}
+
+# Los alimentos aparecen de forma aleatoria en el tablero
+comida = {
+    "color": "red",
+    "forma": "circulo",
+    "puntos_por_comida": 10
+}
+
+# ==================================
+# REGLAS DEL JUEGO
+# ==================================
+
+# Regla para movimiento continuo de la serpiente
+regla_movimiento_continuo = {
+    "descripcion": "la serpiente se mueve automáticamente en la dirección actual cada intervalo de tiempo",
+    "condicion": "tiempo_transcurrido",
+    "accion": "avanzar_un_paso"
+}
+
+# Regla para crecimiento al comer
+regla_crecimiento = {
+    "condicion": "serpiente_come_comida",
+    "accion_1": "aumentar_longitud",
+    "accion_2": "generar_nueva_comida",
+    "puntos_sumados": 10
+}
+
+# Regla de colisión con paredes
+regla_colision_pared = {
+    "condicion": "cabeza_fuera_del_tablero",
+    "accion": "terminar_partida"
+}
+
+# Regla de colisión consigo misma
+regla_colision_propia = {
+    "condicion": "cabeza_toca_cuerpo",
+    "accion": "terminar_partida"
+}
+
+# Regla de aumento de dificultad
+regla_aumento_dificultad = {
+    "condicion": "puntaje_multiplo_de_50",
+    "accion": "incrementar_velocidad",
+    "multiplicar_velocidad": 1.2
+}
+
+regla_fin_juego = {
+    "condicion": "colision_pared o colision_propia",
+    "accion": "mostrar_mensaje_game_over"
+}
+
+# ==================================
+# SISTEMA DE PUNTAJE
+# ==================================
+
+puntaje = {
+    "puntos_iniciales": 0,
+    "puntos_por_comida": 10
+}
+
+# ==================================
+# CONTROLES DEL JUEGO
+# ==================================
+controles = {
+    "mover_arriba": "w",
+    "mover_abajo": "s",
+    "mover_izquierda": "a",
+    "mover_derecha": "d",
+    "pausar": "p",
+    "reiniciar": "r"
+}
+
+
+# ==================================
+# MENSAJES
+# ==================================
+mensajes = {
+    "inicio": "¡Bienvenido al Snake Clásico! Usa WASD para moverte.",
+    "game_over": "¡Fin del juego! Presiona 'r' para reiniciar.",
+    "pausa": "Juego en pausa. Presiona 'p' para continuar."
+}
