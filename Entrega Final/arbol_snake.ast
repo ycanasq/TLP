@@ -1,0 +1,66 @@
+{
+    "regla_colision_pared": {
+        "condicion": "cabeza_fuera_del_tablero", 
+        "accion": "terminar_partida"
+    }, 
+    "controles": {
+        "mover_izquierda": "a", 
+        "reiniciar": "r", 
+        "mover_arriba": "w", 
+        "pausar": "p", 
+        "mover_derecha": "d", 
+        "mover_abajo": "s"
+    }, 
+    "regla_crecimiento": {
+        "accion_2": "generar_nueva_comida", 
+        "condicion": "serpiente_come_comida", 
+        "accion_1": "aumentar_longitud", 
+        "puntos_sumados": 10
+    }, 
+    "nombre_juego": "Snake Clasico", 
+    "serpiente": {
+        "color": "green", 
+        "forma": "cuadrado", 
+        "cabeza_color": "darkgreen", 
+        "longitud_inicial": "longitud_inicial"
+    }, 
+    "comida": {
+        "color": "red", 
+        "forma": "circulo", 
+        "puntos_por_comida": 10
+    }, 
+    "puntaje": {
+        "puntos_iniciales": 0, 
+        "puntos_por_comida": 10
+    }, 
+    "version": "1.0", 
+    "velocidad_inicial": 3.0, 
+    "regla_aumento_dificultad": {
+        "condicion": "puntaje_multiplo_de_50", 
+        "accion": "incrementar_velocidad", 
+        "multiplicar_velocidad": 1.2
+    }, 
+    "regla_colision_propia": {
+        "condicion": "cabeza_toca_cuerpo", 
+        "accion": "terminar_partida"
+    }, 
+    "mensajes": {
+        "pausa": "Juego en pausa. Presiona 'p' para continuar.", 
+        "game_over": "¡Fin del juego! Presiona 'r' para reiniciar.", 
+        "inicio": "¡Bienvenido al Snake Clásico! Usa WASD para moverte."
+    }, 
+    "tablero": {
+        "alto": 17, 
+        "ancho": 17
+    }, 
+    "regla_movimiento_continuo": {
+        "descripcion": "la serpiente se mueve automáticamente en la dirección actual cada intervalo de tiempo", 
+        "condicion": "tiempo_transcurrido", 
+        "accion": "avanzar_un_paso"
+    }, 
+    "regla_fin_juego": {
+        "condicion": "colision_pared o colision_propia", 
+        "accion": "mostrar_mensaje_game_over"
+    }, 
+    "longitud_inicial": 3
+}
